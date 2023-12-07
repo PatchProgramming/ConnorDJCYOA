@@ -58,6 +58,19 @@ def pathDecision():
     time.sleep(5)
     choice = input("Enter a number to make your choice: ")
     #if else statement for options
+
+def bridgeDecision():
+    
+    coinFlip()
+    
+def ropeSwing():
+
+def swim():
+
+def coinFlip():
+    result = chance(1)
+    if result == 1:
+        print("The troll lets you pass with a grumble. As you cross he warns you never to return")
 #random chance generator
 def chance(range):
     return random.randrange(range)
