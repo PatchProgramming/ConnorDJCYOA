@@ -12,7 +12,7 @@ def Start(): #main function which calls all others
     print("Which way do you want to go? \n LEFT \n RIGHT")
     Decision_One()
 def Decision_One():
-    choice = input("LEFT or RIGHT")
+    choice = input("Please enter LEFT or RIGHT: ")
     #choice right
     if choice.upper() == "RIGHT":
         mineDecision()
@@ -28,10 +28,24 @@ def mineDecision():
     print("""\nYou walk up to the abandoned mine and see a sign that says \"Danger Keep Out\".
     would you like to: 
     [1]:Enter the Mine
-    [2]:Take the path to the bridge
-    [3]:Go back and follow the path to the bridge""")
-    time.sleep(3)   
-    choice = input("Enter a number to make your choice")
+    [2]:Take the path to the bridge""")
+    time.sleep(2)   
+    choice = input("Enter a number to make your choice:  ")
+    if choice == "1":
+        print("""
+        
+                            As you enter the mine, the walls shake and the entrance collapes and a boulder pins you to the floor.
+                                    As the light from the entrance fades a sign clatters infront of you.
+        Squinting and using your last bit of energy you can make out the words\"Danger Keep Out\" and you think to yourself that maybe you should have listened...
+            GAME OVER""")
+        exit()
+    elif choice == "2":
+        pathDecision()
+    elif choice == "exit":
+        exit()
+    else:
+        print("Adventurer I didn't catch that... Lets try again")
+        mineDecision()
 
 #funtion for logic of the Path decision
 def pathDecision():
@@ -42,7 +56,7 @@ def pathDecision():
     [3]:try swimming across
     [4]:Go back to the mine""")
     time.sleep(5)
-    choice = input("Enter a number to make your choice")
+    choice = input("Enter a number to make your choice: ")
     #if else statement for options
 #random chance generator
 def chance(range):
